@@ -1,0 +1,229 @@
+/TASK1
+import java.util.Scanner;
+public class task1{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    int n=scanner.nextInt();
+    int max=-1;
+    int min=-1;
+    int sum=0;
+    int count=0;
+    for(int i=1;i<=n;i++){
+      int num=scanner.nextInt();
+      if(num>0&&num%2==0){
+        if(num>max){
+          System.out.print(num);
+        }
+        else if(num<min){
+          System.out.print(num);
+        }
+        sum=sum+num;
+        count++;
+      }
+    }
+    int avg=sum/count;
+    System.out.print(avg);
+  }
+}
+
+//TASK2
+import java.util.Scanner;
+public class task2{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    while(true){
+    System.out.print("Enter an integer");
+    int num=scanner.nextInt();
+    if(num<0){
+      break;
+    }
+    else{
+    }
+    int sq=num*num;
+    System.out.println(sq);
+    }
+  }
+}
+
+//TASK3
+import java.util.Scanner;
+public class task3{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    int n=scanner.nextInt();
+    int count1=0;
+    int count2=0;
+    for(int i=1;i<=n;i++){
+      int num=scanner.nextInt();
+      if(num>=0){
+        count1++;
+        System.out.print(count1+" "+"Non-negative Numbers");
+      }
+      else{
+        count2++;
+        System.out.print(count2+" "+"Negative Numbers");
+      }
+    }
+  }
+}
+//TASK4
+import java .util.Scanner;
+public class task4{
+  public static void main(String [] args ){
+    Scanner scanner=new Scanner(System.in);
+    System.out.print("Enter the number");
+    int num=scanner.nextInt();
+     int pos=1;
+     int start=2;
+     while(pos<=num){
+       int primecount=0;
+       int i=1;
+   
+       while(i<=start){
+      if(start%i==0){
+        primecount++;
+      }
+      i++;
+    }
+       
+       if(primecount==2){
+         System.out.println(start);
+         pos++;
+       }
+       start++;
+     }
+    }
+}
+  
+//TASK5
+import java .util.Scanner;
+public class task5{
+  public static void main(String [] args ){
+    Scanner scanner=new Scanner(System.in);
+    System.out.print("Enter the number");
+    int num=scanner.nextInt();
+    int y=0;
+    
+    for(int term=1;term<=num;term++){
+      int sum=0;
+      int y=0;
+      for(int i=1;i<=term;i++){
+        sum+=i;
+      }
+      y-=sum;
+    }
+    System.out.print(y);
+  }
+}
+
+//TASK6
+import java .util.Scanner;
+public class task6{
+  public static void main(String [] args ){
+    Scanner scanner=new Scanner(System.in);
+ 
+   
+    while(true){
+       System.out.print("Enter Number");
+    int num=scanner.nextInt();
+    
+    int count=0;
+      for(int i=1;i<=num;i++){
+        
+        if(num%i==0){
+          count++;
+        }
+      }
+    
+    System.out.println(num+" "+"has"+" "+count+" "+"divisors");
+  }
+    
+  }
+
+}
+
+//TASK7
+import java.util.Scanner;
+public class task11{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    int start=scanner.nextInt();
+     int end=scanner.nextInt();
+    
+    int sum;
+    
+    for(int i=s
+          
+//TASK9
+import java.util.Scanner;
+public class task9{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    
+    int n=scanner.nextInt();
+    
+    for(int line=1;line<=n;line++){
+
+      for(int space=1;space<=n-line;space++){
+        System.out.print(" ");
+      }
+      for(int col=1;col<=line;col++){
+      System.out.print(col);
+    }
+      System.out.println();
+    }
+  }
+}
+
+//TASK10
+import java.util.Scanner;
+public class task10{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    
+    int n=scanner.nextInt();
+    
+    for(int line=1;line<=n;line++){
+
+      for(int space=1;space<=n-line;space++){
+        System.out.print(" ");
+      }
+      for(int col=1;col<=(2*line-1);col++){
+      System.out.print(col);
+    }
+      System.out.println();
+    }
+  }
+}
+     
+//TASK11
+import java.util.Scanner;
+public class task11{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    int start=scanner.nextInt();
+     int end=scanner.nextInt();
+    
+    int sum;
+    
+    for(int i=start;i<=end;i++){
+      int temp=i;
+      sum=0;
+      
+      
+    while( temp>0){
+      int rem=temp%10;
+    
+     
+      sum+=rem*rem*rem;
+      temp=temp/10;
+    }
+    if(sum==i){
+      System.out.println(sum);
+    }
+    else{
+    }
+    }
+  }
+}   
+    
