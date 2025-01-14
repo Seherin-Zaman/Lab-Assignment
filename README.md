@@ -1,1 +1,1 @@
-# Lab-Assignment01
+# All Lab-Assignments of CSE110 with solution
