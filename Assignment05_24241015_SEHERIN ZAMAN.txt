@@ -1,0 +1,287 @@
+//TASK1
+import java.util.Scanner;
+public class task2{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    System.out.println("Enter a string");
+    String input=scanner.nextLine();
+    String sc_new="";
+    for(int i=0;i<input.length();i++){
+      char ch=input.charAt(i);
+      if(ch>=94 &&ch<=122){
+        ch=(char)(ch-32);
+      }
+      sc_new+=ch;
+    }
+    System.out.print(sc_new);
+  }
+}
+
+//TASK2
+import java.util.Scanner;
+public class task2{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    System.out.println("Enter a string");
+    String input=scanner.nextLine();
+    String sc_new="";
+    String original=input;
+    
+    
+    for(int i=input.length()-1;i>=0;i--){
+      
+      
+      sc_new+=input.charAt(i);
+    }
+    if(original.equals(sc_new)){
+      System.out.print("true");
+    }
+    else{
+      System.out.print("false");
+    }
+    
+  }
+}
+//TASK3
+import java.util.Scanner;
+public class task3{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    System.out.println("Enter a string");
+    String input=scanner.nextLine();
+    char sh=scanner.next().charAt(0);
+    String temp=" ";
+    
+    
+    for(int i=0;i<input.length();i++){
+      char ch=input.charAt(i);
+      if (ch!=sh){
+        temp+=ch;
+      }
+      else{
+        System.out.println(temp);
+      temp=" ";
+      }
+    }
+      System.out.println(temp);
+    }
+  }
+
+//TASK4
+import java.util.Scanner;
+public class task4{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    System.out.println("Enter a string");
+    String input=scanner.nextLine();
+    String temp=" ";
+    
+    
+    for(int i=input.length()-1;i>=0;i--){
+      char ch=input.charAt(i);
+  
+       temp+=ch;
+    }
+    
+    System.out.println(temp);
+  }
+  }
+
+//TASK5
+import java.util.Scanner;
+public class task5{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    String n1=scanner.nextLine();
+   
+    int vowel=0;
+    int cons=0;
+    
+    for(int i=0;i<n1.length();i++){
+       char ch=n1.charAt(i);
+       if(ch>=65&&ch<=90||ch>=97&&ch<=122){
+         if(ch=='A'||ch=='a'||ch=='E'||ch=='e'||ch=='O'||ch=='o'||ch=='U'||ch=='u'){
+      
+             vowel++;
+         }
+         else{
+           cons++;
+         }
+       }
+    }
+    if(vowel%3==0&&cons%5==0){
+      System.out.print("Aaarr! Me Plunder!!");
+    }
+    else{
+      System.out.print("Blimary! No Plunder!!");
+    }
+  }
+}
+
+
+//TASK6
+import java.util.Scanner;
+public class task6{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    String n=scanner.nextLine();
+    String temp="";
+    
+    for(int i=n.length()-1;i>=0;i--){
+      
+      char ch=n.charAt(i);
+      
+
+        
+      
+     
+      temp=ch+temp;
+      if(ch==32){
+    
+   
+    System.out.print(temp);
+    temp=" ";
+  }
+    }
+    System.out.print(temp);
+}
+}
+
+//TASK7
+import java.util.Scanner;
+public class task7{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    String n1=scanner.nextLine();
+     String n2=scanner.nextLine();
+     String res1=" ";
+     
+     String res=" ";
+  
+     for(int i1=0;i1<n1.length();i1++){
+       char ch1=n1.charAt(i1);
+       boolean flag=false;
+       for(int i2=0;i2<n2.length();i2++){
+         if(ch1==n2.charAt(i2)){
+           flag=true;
+           break;
+          
+         }
+       }
+       if(!flag){
+         res+=ch1;
+       }
+     }
+     
+     
+         
+     for(int i1=0;i1<n2.length();i1++){
+       char ch2=n2.charAt(i1);
+       boolean flag=false;
+       for(int i2=0;i2<n2.length();i2++){
+         if(ch2==n1.charAt(i2)){
+           flag=true;
+           break;
+        
+         }
+       }
+     
+       if(!flag){
+         res+=ch2;
+       }
+     }
+     
+     
+     System.out.print(res.toUpperCase());
+  }
+}
+                  
+    
+//TASK8
+import java.util.Scanner;
+public class task8{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    String n=scanner.nextLine();
+    int count=0;
+    
+    for(int i=0;i<n.length();i++){
+      char ch=n.charAt(i);
+      if((ch>=65&&ch<=90)||(ch>=94&&ch<=122)){
+        count++;
+        if(count%2!=0){
+          if(!(ch>=94&&ch<=122)){
+          ch=(char)(ch+32);
+          System.out.print(ch);
+        }
+          else{
+            System.out.print(ch);
+        }
+        }
+        else{
+          if(!(ch>=65&&ch<=90)){
+          ch=(char)(ch-32);
+          System.out.print(ch);
+        }
+          else{
+            System.out.print(ch);
+          }
+      }
+    }
+      else{
+        System.out.print((char)ch);
+      }
+  }
+}
+}
+
+//TASK9
+import java.util.Scanner;
+public class task9{
+  public static void main(String [] args){
+    Scanner scanner=new Scanner(System.in);
+    String password=scanner.nextLine();
+    int uppercount=0;
+    int lowercount=0;
+    int digit=0;
+    int specialcharacter=0;
+   
+  
+    
+    if(password.length()<8){
+      System.out.print("False");
+    }
+    else{
+      
+  
+     
+
+    
+    for(int i=0;i<password.length();i++){
+       char ch=password.charAt(i);
+     
+       if(ch>=65&&ch<=90){
+         uppercount++;
+       }
+       else if(ch>=94&&ch<=122){
+         lowercount++;
+       }
+       else if(ch>=48&&ch<=57){
+         digit++;
+       }
+       else{
+         specialcharacter++;
+       }
+         
+    }
+    
+    
+    if(uppercount>0&&lowercount>0&&digit>0&&specialcharacter>0){
+      System.out.print("True");
+    }
+    }
+  }
+}
+
+   
+      
